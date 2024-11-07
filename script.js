@@ -27,6 +27,17 @@ class PixelGrid {
         this.canvas.addEventListener('mouseup', this.handleMouseUp.bind(this));
         this.canvas.addEventListener('mouseleave', this.handleMouseUp.bind(this));
         
+        document.addEventListener('click', (e) => {
+            if (this.showPrimeLabels && !e.target.matches('#show-prime')) {
+                document.getElementById('show-prime').checked = false;
+                this.showPrimeLabels = false;
+                this.showCornerLabels = this.savedCornerLabelsState;
+                document.getElementById('show-corners').checked = this.savedCornerLabelsState;
+                this.updateCorners();
+                this.draw();
+            }
+        });
+        
         document.getElementById('show-corners').addEventListener('change', (e) => {
             this.showCornerLabels = e.target.checked;
             this.savedCornerLabelsState = e.target.checked;
@@ -218,8 +229,8 @@ class PixelGrid {
         if (!this.showPrimeLabels && this.showCornerLabels) {
             this.addCorner(cornersContainer, 'A', -32, 908);
             this.addCorner(cornersContainer, 'B', -32, 0);
-            this.addCorner(cornersContainer, 'C', 908, 0);
-            this.addCorner(cornersContainer, 'D', 908, 908);
+            this.addCorner(cornersContainer, 'C', 920, 0);  // Changed position
+            this.addCorner(cornersContainer, 'D', 920, 908); // Changed position
         }
 
         if (this.showPrimeLabels && this.pointPosition.x >= 0 && this.pointPosition.y < 100) {

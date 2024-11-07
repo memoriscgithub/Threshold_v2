@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: rgb(107, 114, 128);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    width: 908px;
+}
+
+.header h1 {
+    color: rgb(209, 213, 219);
+    font-weight: normal;
+    font-family: serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+.canvas-container {
+    position: relative;
+    margin-top: -4px;
+}
+
+.controls {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    color: white;
+    font-family: monospace;
+    font-size: 14px;
+    width: 1000px;
+    padding: 0 32px;
+}
+
+.metric {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.color-indicator {
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+}
+
+.red { background-color: #ef4444; }
+.green { background-color: #22c55e; }
+
+.value {
+    width: 48px;
+    text-align: right;
+    margin-left: 8px;
+}
+
+.corner {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+}
+
+.corner.prime {
+    background: rgb(255, 165, 0);
+}
+
+.status-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ef4444;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    user-select: none;
+}
+
+.status-hidden {
+    display: none;
+}
+
+.error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ef4444;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-hidden {
+    display: none;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+}

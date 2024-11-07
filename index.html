@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panject Environment Model</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Simplified two-component 'panject-environment' ecosystem model</h1>
+        </div>
+        <div class="canvas-container">
+            <canvas id="pixelGrid" width="908" height="908"></canvas>
+            <div id="corners"></div>
+            <div id="status-indicator" class="status-hidden"></div>
+            <div id="error-message" class="error-hidden">
+                Both coordinates must be greater than zero
+            </div>
+        </div>
+        <div class="controls">
+            <div class="metric">
+                <div class="color-indicator red"></div>
+                <span>reparatron:</span>
+                <span id="reparatron-value" class="value">0%</span>
+            </div>
+            <div class="metric">
+                <div class="color-indicator green"></div>
+                <span>ezoptron:</span>
+                <span id="ezoptron-value" class="value">0%</span>
+            </div>
+            <div class="metric">
+                <span>demiurgic control:</span>
+                <span id="control-value" class="value">0.00%</span>
+            </div>
+            <div class="metric">
+                <span>status:</span>
+                <span id="status-value">semiurge</span>
+            </div>
+            <div class="metric">
+                <span>show ABCD:</span>
+                <input type="checkbox" id="show-corners">
+            </div>
+            <div class="metric">
+                <span>show A'B'C'D':</span>
+                <input type="checkbox" id="show-prime">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
